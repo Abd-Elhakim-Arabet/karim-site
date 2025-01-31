@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 
 type Props = {
-<<<<<<< HEAD
   params: Promise<{ id: string }>;
 };
 
@@ -17,18 +16,7 @@ export default async function ArticlePage({ params }: Props) {
 
   if (!article) {
     return notFound(); // Ensure it's called when article is not found
-=======
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
 
-export default function ArticlePage({ params }: Props) {
-  const articleId = Array.isArray(params.id) ? params.id[0] : params.id;
-  const article = articles.find((article) => article.id === articleId);
-
-  if (!article) {
-    return notFound(); // Ensure it's inside a condition
->>>>>>> origin/main
   }
 
   return (
